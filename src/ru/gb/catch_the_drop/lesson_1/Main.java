@@ -22,7 +22,6 @@ public class Main {
             String str = Integer.toString(a);
             String reverse = new StringBuffer(str).reverse().toString();
             System.out.println(reverse);
-            //String reverse = new StringBuffer(str).reverse().toString();
         } else {
             System.out.println(a);
         }
@@ -55,6 +54,7 @@ public class Main {
         System.out.println(summw(3, 3));
         revers(118);
         LeapYear(2020);
+
 
     }
 }
