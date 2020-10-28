@@ -12,6 +12,7 @@ public class arr {
                 arr[i]=0;
             }
         }
+
     }
 
 
