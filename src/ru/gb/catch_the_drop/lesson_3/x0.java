@@ -15,7 +15,7 @@ public class x0 {
 
     public static char[][] map;
 
-    public static void incMap() { //Инициализация пустого поля
+    public static void incMap() { // Инициализация пустого поляя
         map = new char[mapSize][mapSize];
         for (int i = 0; i < mapSize; i++)
             for (int y = 0; y < mapSize; y++) {
@@ -24,7 +24,7 @@ public class x0 {
     }
 
 
-    public static void printMap() { //Печатаем поле
+    public static void printMap() { // Печатаем поле
         for (int i = 0; i < mapSize; i++) {
             for (int y = 0; y < mapSize; y++) {
                 System.out.print(map[i][y] + "|");
