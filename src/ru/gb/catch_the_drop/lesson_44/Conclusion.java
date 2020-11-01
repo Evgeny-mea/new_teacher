@@ -11,6 +11,7 @@ public class Conclusion {
 
         Employees[] nums = new Employees[5];
         nums[0] = a;
+
         nums[1] = b;
         nums[2] = c;
         nums[3] = d;
