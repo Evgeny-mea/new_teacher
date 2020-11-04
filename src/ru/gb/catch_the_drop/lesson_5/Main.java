@@ -1,9 +1,6 @@
 package ru.gb.catch_the_drop.lesson_5;
 
 public class Main {
-
-
-
     public static void main (String[]args){
         Cat Barsik = new Cat("Барсик",12,12,1.2f);
         Dog Tuzik = new Dog("Тузик", 13,12,4.f);
@@ -19,6 +16,5 @@ public class Main {
         Barsik.jump(0.3f);
         Barsik.swim(122);
         Barsik.move(111);
-
     }
 }
