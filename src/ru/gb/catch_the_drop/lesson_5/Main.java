@@ -14,6 +14,7 @@ public class Main {
 
         System.out.println();
 
+
         System.out.println(Barsik.name);
         Barsik.jump(0.3f);
         Barsik.swim(122);
