@@ -8,5 +8,6 @@ public class Bird extends Animal{
     void swim (int dist) {
         System.out.println(name + " отказался плавать");
     }
+
 }
 

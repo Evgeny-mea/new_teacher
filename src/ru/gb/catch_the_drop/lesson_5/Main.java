@@ -7,6 +7,7 @@ public class Main {
         Bird Blue = new Bird("Синий", 12,31, 1.0f);
         Horse White = new Horse("Белый", 76,12,1.0f);
 
+
         System.out.println(Tuzik.name);
         Tuzik.jump(0.3f);
         Tuzik.swim(1111);

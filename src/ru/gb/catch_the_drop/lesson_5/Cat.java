@@ -5,6 +5,7 @@ public class Cat extends Animal{
         super(name, maxRun = 200,0,2.0f);
     }
 
+
     @Override
     void swim (int dist) {
         System.out.println(name + " отказался плавать");
