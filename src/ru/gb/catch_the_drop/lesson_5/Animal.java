@@ -12,6 +12,7 @@ public class Animal {
         this.maxSwim = maxSwim;
         this.maxJump = maxJump;
 
+
     }
 
     void move(int dist) {
