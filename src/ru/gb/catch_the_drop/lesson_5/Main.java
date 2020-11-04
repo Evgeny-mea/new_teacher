@@ -12,6 +12,7 @@ public class Main {
         Tuzik.swim(1111);
         Tuzik.move(655);
 
+
         System.out.println(Barsik.name);
         Barsik.jump(0.3f);
         Barsik.swim(122);
