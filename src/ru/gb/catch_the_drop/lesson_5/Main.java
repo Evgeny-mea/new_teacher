@@ -19,5 +19,6 @@ public class Main {
         Barsik.jump(0.3f);
         Barsik.swim(122);
         Barsik.move(111);
+
     }
 }
