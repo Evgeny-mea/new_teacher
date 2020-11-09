@@ -5,8 +5,8 @@ public class Bird extends Animal{
         super(name,5, 0,0.2f);
     }
     @Override
-    void swim (int dist) {
-        System.out.println(name + " отказался плавать");
+    String swim (int dist) {
+        return name + " отказался плавать";
     }
 
 }

@@ -11,17 +11,16 @@ public class Animal {
         this.maxRun = maxRun;
         this.maxSwim = maxSwim;
         this.maxJump = maxJump;
-
-
     }
 
     void move(int dist) {
         if (maxRun > dist) System.out.println(name + " пробежал " + dist + " метра");
         else System.out.println(name +  " не смог пробежать " + dist + " метра" );
     }
-    void swim(int dist) {
-        if (maxSwim > dist) System.out.println(name + " проплыл " + dist + " метра");
-        else System.out.println(name + " не смог проплыть " + dist + " метра");
+    String swim(int dist) {
+        if (maxSwim > dist) return name + "Проплыл";
+        else return name + " не смог проплыть" + dist + " метра";
+//            System.out.println(name + " не смог проплыть " + dist + " метра");
     }
     void jump(float dist) {
         if (maxJump > dist) System.out.println(name + " прыгнул " + dist + " метра");
