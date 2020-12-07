@@ -45,7 +45,7 @@ public class MainWin extends JFrame {
 
 
     } // Передаем параметры в GameMap
-    public void acceptSettings(int gameMode, int fieldSizeX, int fieldSizeY, int winLength) {
-        map.startNewGame(gameMode, fieldSizeX, fieldSizeY, winLength);
+    public void acceptSettings(int gameMode, int fildSizeX, int fildSizeY, int winLength) {
+        map.startNewGame(gameMode, fildSizeX, fildSizeY, winLength);
     }
 }
