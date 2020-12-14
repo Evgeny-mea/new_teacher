@@ -31,7 +31,7 @@ public class ClientGUI extends JFrame implements ActionListener, Thread.Uncaught
     private boolean shownIoErrors = false;
 
     private ClientGUI() {
-        Thread.setDefaultUncaughtExceptionHandler(this); //Установка непойманных исключений по умолчанию
+        Thread.setDefaultUncaughtExceptionHandler(this); //Установка непойманых исключений по умолчанию
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE); //Останавливаем приложение при закрытие
         setLocationRelativeTo(null); //Размещение рабочего окна
         setSize(WIDTH, HEIGHT); // Размеры окна
@@ -41,7 +41,7 @@ public class ClientGUI extends JFrame implements ActionListener, Thread.Uncaught
         JScrollPane scrollUser = new JScrollPane(userList); //Скролинг окна с пользователями
         String[] users = {"user1", "user2", "user3", "user4", "user5", // Массив с пользователями
                 "user_with_an_exceptionally_long_name_in_this_chat"};
-        userList.setListData(users); // Добавляем users в userList списком
+        userList.setListData(users); // Добовляем users в userList списком
         scrollUser.setPreferredSize(new Dimension(100, 0)); //Устанавливаем для размеры для окна юзеров(ширину)
         cbAlwaysOnTop.addActionListener(this); //Передаем параметры в ActionListener (Галочка)
         btnSend.addActionListener(this); //Передаем параметры в ActionListener (Отправить)
@@ -76,7 +76,7 @@ public class ClientGUI extends JFrame implements ActionListener, Thread.Uncaught
     }
 
     @Override
-    public void actionPerformed(ActionEvent e) {
+    public void actionPerformed(ActionEvent e) { //Как работает actionPerformed - почитать
         Object src = e.getSource(); // Слушатель события
         if (src == cbAlwaysOnTop) { // Если слушатель совпал с действием нажатия на галочку то ->
             setAlwaysOnTop(cbAlwaysOnTop.isSelected()); // setAlwaysOnTop - устанавливает положение поверх окон. isSelected - переключает между true false
@@ -91,7 +91,7 @@ public class ClientGUI extends JFrame implements ActionListener, Thread.Uncaught
         String msg = tfMessage.getText();    // Помещаем весь текст из окна ввода сообщения в msg
         String username = tfLogin.getText(); // Берем логин пользователя, помещаем в username
         msg = msg.trim(); // Не отправляем пробелы в чат
-        if ("".equals(msg)) return; // Сравниваем пустой текст с msg возвращаем тру \ фолс
+        if ("".equals(msg)) return; // Сравниваем пустой текст с msg возращаем тру \ фолс
         tfMessage.setText(null); // Убирает текст после отправки сообщения
         putLog(String.format("%s: %s", username, msg)); // "Собираем" сообщение  Пользователь + Сообщение
         wrtMsgToLogFile(msg, username); // Передаем Текст + Логин в метод для записи  в текстовый документ
@@ -114,11 +114,12 @@ public class ClientGUI extends JFrame implements ActionListener, Thread.Uncaught
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-                log.append(msg + "\n"); //добавляем текст сообщения в конец
+                log.append(msg + "\n"); //добовляем текст сообщения в конец
+                log.setCaretPosition(log.getDocument().getLength());//НЕПОНЯТНОООО
             }
         });
     }
-    //Обработка ошибок
+
     private void showException(Thread t, Throwable e) {
         String msg;
         StackTraceElement[] ste = e.getStackTrace();
