@@ -13,6 +13,7 @@ public class ModulA extends Thread {
 
 
     @Override
+
     public void run() {
         System.out.println("Старт потока " + getName());
         for (int i = 0; i < arr.length; i++)

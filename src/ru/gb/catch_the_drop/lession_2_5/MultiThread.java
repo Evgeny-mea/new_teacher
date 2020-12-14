@@ -35,6 +35,7 @@ public class MultiThread {
     }
 
     //Метод для вычесления значений
+
     private static void methodOne (float[] arr) {
         for (int i = 0; i < arr.length; i++) {
             arr[i] = (float) (arr[i] *
